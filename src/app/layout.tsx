@@ -1,5 +1,5 @@
 import "./globals.css";
-
+import { ThemeProvider } from "@/providers/ThemeProvider";
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -7,7 +7,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning className="dark:bg-gray-900">
-      <body>{children}</body>
+      <body>
+        <ThemeProvider>{children}</ThemeProvider>
+      </body>
     </html>
   );
 }
