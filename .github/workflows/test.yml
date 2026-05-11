@@ -1,5 +1,11 @@
-name: Github action 연습하기
-on: push
+name: Github Action Test 실행
+on:
+  pull_request:
+    branches:
+      - main
+      - develop
+      - stage
+    types: [opened, reopened, synchronize]
 
 jobs:
   test:
